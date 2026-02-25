@@ -1,0 +1,6 @@
+.env
+*.local
+.DS_Store
+
+# Personal initiative folders — not shared with the team
+initiatives/personal/
