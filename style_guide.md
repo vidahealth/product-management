@@ -17,7 +17,7 @@ Writing standards for all product management documentation in this repository.
 
 | Document | When to create | Audience | Length |
 |----------|---------------|----------|--------|
-| One-Pager | Early idea stage | Leadership, cross-functional partners | ~1 page |
+| Opportunity Doc | Early idea stage | Leadership, cross-functional partners | ~1 page |
 | PID (Product Initiative Document) | Before roadmapping | Product, Eng, Design, Leadership | 2–4 pages |
 | Epic | Before discovery kicks off | Eng, Design, cross-functional teams | Full template |
 | Jira Story | During planning | Engineering team | User story + AC |
@@ -92,6 +92,26 @@ Split metrics into two categories:
 - **Business KPIs**: How will this affect revenue, retention, or efficiency at the business level?
 - **Usage metrics**: How will users interact with this feature? Are they successful? Getting stuck?
 
+### Productboard Formatting
+When preparing roadmap content for Productboard, use a simplified, paste-safe format:
+- Use `##` section headers only (avoid deeper heading levels unless necessary)
+- Prefer flat bullets over tables (`Label: value`)
+- Keep each metric on one line:
+  `Metric — Baseline: X | Target: Y`
+- Convert inline callouts to plain text:
+  `**Action required:** ...`
+- Keep links inline with clear labels
+- For backend-only work, include architecture diagrams/links in `Proposed Approach` and set UI design to `N/A`
+- Prioritize this section order for Productboard: Problem, Business Impact, Proposed Approach, Metrics, Risks, Dependencies
+
+Recommended Productboard section skeleton:
+- `## Problem`
+- `## Business Impact`
+- `## Proposed Approach`
+- `## Metrics`
+- `## Risks`
+- `## Dependencies`
+
 ### Quantifying impact under uncertainty
 When an estimate has a wide range, frame it as a floor with modest upside acknowledgment — not as a midpoint or ceiling. This preserves a credible business case without overpromising.
 
@@ -112,7 +132,7 @@ Use this framing in business cases, KPIs, and any section where estimates are un
 | Milestone | Term used in the epic template to describe the Stories that will be created under an Epic. "Milestones" in an epic = Stories in Jira. |
 | ICE Score | Impact × Confidence ÷ Effort — used to prioritize epics during roadmapping |
 | PID | Product Initiative Document — a pre-epic summary used for leadership alignment |
-| One-Pager | A short brief for a very early-stage idea; used to test alignment before investing in discovery |
+| Opportunity Doc | A short brief for a very early-stage idea; frames context, problem statement, and business case before investing in discovery |
 | ADR | Architecture Decision Record — a short doc capturing a key technical decision |
 | GTM | Go-to-Market — the plan for how a feature gets launched to customers |
 
@@ -123,7 +143,7 @@ Use this framing in business cases, KPIs, and any section where estimates are un
 - Epic titles: start with a verb — "Modernize the billing dashboard" not "Billing dashboard modernization"
 - Story titles: start with a verb — "Add date filter to encounter list" not "Date filter"
 - Sub-Task titles: start with a verb, be specific — "Write migration script for legacy encounter IDs"
-- One-pager titles: describe the outcome — "One-Pager: Reducing Prior Authorization Lag"
+- Opportunity doc titles: describe the outcome, not the solution — "Reducing Prior Authorization Lag" not "Build a Prior Auth Tool"
 
 ---
 

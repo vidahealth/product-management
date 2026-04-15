@@ -4,3 +4,6 @@
 
 # Personal initiative folders — not shared with the team
 initiatives/personal/
+
+# Local scripts — not shared with the team
+scripts/

@@ -1,3 +1,3 @@
-# One-Pager: [Initiative Name]
+# Deprecated
 
-_This file is written by the One-Pager Agent. Run the agent and it will populate this file with the finalized one-pager. You can then download or import it into Google Docs to share._
+One-pagers have been replaced by opportunity docs. See `opportunity-doc.md`.

@@ -7,9 +7,10 @@ This repository provides AI-powered agents for product management documentation 
 Tell me which initiative you're working on (folder name under `initiatives/`). I'll load the relevant context automatically.
 
 To use an agent, ask me to run one:
+- **Roadmap Item Agent** — create or fill out a roadmap item (scope, business case, requirements, cross-functional guidelines)
 - **Epic Agent** — create or update a Jira epic
 - **Jira Task Agent** — create or update Jira tickets
-- **One-Pager Agent** — draft a one-page initiative summary
+- **Opportunity Doc Agent** — draft a standalone opportunity doc (context, problem statement, business case)
 - **PID Agent** — create a full Product Initiative Document
 
 ## Repository Structure
@@ -40,13 +41,13 @@ Each initiative lives in `initiatives/<name>/`:
 
 | File | Purpose |
 |------|---------|
-| `game-plan.md` | Objectives, milestones, success criteria |
+| `roadmap-item.md` | Scope, ownership, business case, and requirements — written by the Roadmap Item Agent |
 | `references.md` | Jira project key, Confluence links, stakeholders |
 | `meeting-notes.md` | Running meeting notes |
 | `transcripts.md` | Raw interview/meeting transcripts |
 | `analytics.md` | Query results, dashboard links, key metrics, experiment results |
 | `learnings.md` | What changed and why — feeds back into shared resources |
-| `one-pager.md` | _(optional)_ Finalized one-pager — written by the One-Pager Agent |
+| `opportunity-doc.md` | _(optional)_ Standalone opportunity doc — written by the Opportunity Doc Agent |
 | `pid.md` | _(optional)_ Finalized PID — written by the PID Agent |
 
 ## Examples
@@ -56,10 +57,11 @@ Each initiative lives in `initiatives/<name>/`:
 | File | Used by |
 |------|---------|
 | `examples/epics/example-epic.md` | Epic Agent |
-| `examples/one-pagers/example-one-pager.md` | One-Pager Agent |
+| `examples/opportunity-docs/example-opportunity-doc.md` | Opportunity Doc Agent |
 | `examples/pids/example-pid.md` | PID Agent |
 | `examples/stories/example-story.md` | Jira Task Agent |
 | `examples/sub-tasks/example-sub-task.md` | Jira Task Agent |
+| `examples/roadmap-items/` | Roadmap Item Agent — add a best-in-class example here to improve output quality |
 
 When a placeholder is replaced with a real document, agent output quality improves immediately.
 
@@ -101,6 +103,6 @@ The agent files are living documents. When you learn something, update the file.
 ## Adding a New Initiative
 
 1. Create `initiatives/<initiative-name>/` folder
-2. Create `game-plan.md`, `references.md`, `meeting-notes.md`, `transcripts.md`, `analytics.md`, `learnings.md`
+2. Create `roadmap-item.md`, `references.md`, `meeting-notes.md`, `transcripts.md`, `analytics.md`, `learnings.md`
 3. Add the Jira project key and relevant links to `references.md`
-4. Start using the agents
+4. Run the Roadmap Item Agent to fill out the roadmap item
